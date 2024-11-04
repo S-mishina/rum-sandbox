@@ -1,0 +1,59 @@
+/* app/layout.module.css */
+
+.header {
+  background-color: #131921;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #232f3e;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  color: #ff9900;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #131921;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

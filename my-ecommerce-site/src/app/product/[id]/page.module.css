@@ -1,0 +1,107 @@
+/* app/product/[id]/page.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.productName {
+  font-size: 2em;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.productDescription {
+  font-size: 1.1em;
+  color: #555;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.productPrice {
+  font-size: 1.8em;
+  color: #b12704;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.addToCartButton {
+  background-color: #ffa41c;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.addToCartButton:hover {
+  background-color: #ff9900;
+  transform: scale(1.05);
+}
+
+.reviews {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.reviewTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.starRating {
+  color: #ffb400;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.reviewCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.reviewerName {
+  font-weight: bold;
+  color: #333;
+}
+
+.reviewDate {
+  font-size: 0.9em;
+  color: #999;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.reviewText {
+  font-size: 1em;
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.4;
+}
