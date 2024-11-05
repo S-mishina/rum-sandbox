@@ -11,6 +11,20 @@ services:
     volumes:
       - ./tempo.yaml:/etc/tempo.yaml
 
+  loki:
+    image: grafana/loki:2.9.2
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./loki-config.yaml:/etc/loki-config.yaml
+
+  promtail:
+    image: grafana/promtail:2.9.2
+    command: -config.file=/etc/promtail/config.yml
+    volumes:
+      - ./promtail-config.yaml:/etc/promtail-config.yaml
+
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -53,6 +67,7 @@ services:
       - ./config.alloy:/etc/alloy/config.alloy
     ports:
       - "12345:12345"
+      - "12346:12346"
       - "14317:14317"
       - "14318:14318"
     command:
