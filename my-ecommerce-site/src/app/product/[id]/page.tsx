@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import styles from './page.module.css';
+import { getFaroInstance } from '../../lib/initializeFaro';
 
 // 動的ルートの型定義
 interface ProductDetailPageProps {
@@ -63,6 +64,17 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
             setProduct(productData[id]);
         });
+
+        // Faro のエラーログ送信
+        async function sendErrorLog() {
+            const faro = await getFaroInstance(); // Faro初期化を待機
+            if (faro) {
+                faro.api.pushError(new Error("Test error for Faro"));
+            } else {
+                console.error("Faro instance not initialized");
+            }
+        }
+        sendErrorLog();
     }, [params]);
 
     if (!product) return <p>Loading...</p>;

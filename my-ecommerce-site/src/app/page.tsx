@@ -1,6 +1,10 @@
 // app/page.tsx
+"use client";
+
 import Link from 'next/link';
 import styles from './page.module.css';
+import { getFaroInstance } from './lib/initializeFaro';
+import { useEffect } from 'react';
 
 export default function HomePage() {
     const products = [
@@ -8,6 +12,18 @@ export default function HomePage() {
         { id: 2, name: "Product 2", description: "An Amazon-style product description", price: "¥3,400" },
         { id: 3, name: "Product 3", description: "An Amazon-style product description", price: "¥5,600" },
     ];
+
+    useEffect(() => {
+        async function sendErrorLog() {
+            const faro = await getFaroInstance(); // Faro初期化を待機
+            if (faro) {
+                faro.api.pushError(new Error("Test error for Faro"));
+            } else {
+                console.error("Faro instance not initialized");
+            }
+        }
+        sendErrorLog();
+    }, []); // 初回レンダリング時にのみ実行
 
     return (
         <section>
