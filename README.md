@@ -22,4 +22,22 @@ ref: [https://grafana.com/grafana/dashboards/17766-frontend-monitoring/](https:/
 
 ## explanation
 
+### RUM vs APM
+
+#### boundary line
+
+TBU
+
+![RUM vs APM](./docs/image/rum-vs-apm.png)
+
+#### Comparison of RUM and APM
+
+TBU
+
+#### Metrics that can be obtained with RUM
+
+TBU
+
+### What I consider to be best practices for RUM
+
 TBU
