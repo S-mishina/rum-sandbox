@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN npm install
 COPY my-ecommerce-site/ .
 RUN npm run build
 
-FROM node:18-alpine AS runner
+FROM node:22-alpine AS runner
 
 ENV NODE_ENV=production
 ENV OTEL_LOG_LEVEL=debug
